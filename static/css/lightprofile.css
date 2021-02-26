@@ -1,0 +1,43 @@
+button{
+  background: #FF416C;
+  background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+  background: linear-gradient(to right, #FF4B2B, #FF416C);
+  color: white;
+
+}
+.card-text{
+  color: black;
+  font-size: 17px;
+
+}
+.profile_pic{
+
+  max-width: 200px;
+  max-height: 200px;
+  margin: 0 auto;
+  border-radius: 50%;
+
+}
+
+h1,h2,h3,h4,h5,h6,small{
+  color: black;
+  font-size: 12px;
+}
+footer {
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+}
+footer p {
+  margin: 10px 0;
+}
+
+footer i {
+ color: red;
+}

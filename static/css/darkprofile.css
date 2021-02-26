@@ -1,0 +1,62 @@
+button{
+  background: #FF416C;
+  background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+  background: linear-gradient(to right, #FF4B2B, #FF416C);
+  color: white;
+
+}
+.card-text{
+  color: #FF416C;
+  font-size: 17px;
+
+}
+h1,h2,h3,h4,h5,h6,small{
+  color: #FF416C;
+  font-size: 12px;
+}
+
+hr{
+  background-color: #eaeaeaea;
+}
+
+body{
+  background-color: rgb(36, 41, 46)!important;
+}
+.col-md-9,{
+  background-color: rgb(49,54,63)!important;
+  border:2px solid rgb(24, 26, 31);
+
+}
+
+.card{
+  background-color: rgb(49,54,63)!important;
+  border:2px solid rgb(24, 26, 31);
+
+}
+
+.profile_pic{
+
+  max-width: 200px;
+  max-height: 200px;
+  margin: 0 auto;
+  border-radius: 50%;
+
+}
+footer {
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+}
+footer p {
+  margin: 10px 0;
+}
+
+footer i {
+ color: red;
+}

@@ -1,0 +1,39 @@
+body{
+  background-color: rgb(36, 41, 46)!important;
+}
+
+.card-text,i,.app-p{
+  color: #fff;
+}
+
+hr{
+  background-color: #eaeaeaea;
+}
+
+.card{
+  background-color: rgb(49,54,63)!important;
+  border:2px solid rgb(24, 26, 31);
+}
+footer {
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+}
+footer p {
+  margin: 10px 0;
+}
+
+footer i {
+ color: red;
+}
+
+a {
+
+  text-decoration: none;
+}

@@ -1,0 +1,131 @@
+{% include 'dating/navbar.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="{% static '/images/love.png'  %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/lightprofile.css'  %}">
+    {% if request.user.profile.value == 'lightprof.css' %}
+
+
+     <link rel="stylesheet" type="text/css" href="{% static '/css/lightprofile.css'  %}">
+    {% elif request.user.profile.value == 'darkprof.css'   %}
+
+     <link rel="stylesheet" type="text/css" href="{% static '/css/darkprofile.css'  %}">
+    {% endif %}
+    
+
+   
+    
+
+    
+
+    <!-- <link rel="stylesheet" type="text/css" href="{% static '/css/darkprofile.css'  %}"> -->
+
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Edit Profile</title>
+    
+
+  </head>
+  <body style="font-family: 'Montserrat', sans-serif">
+    <br>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+        
+         <a href="{% url 'profile' %}"  style=" color: white; text-decoration: none; outline: none;"> 
+          <button class="btn btn-default btn-block" style="background-color: #e30133; color: white; "> &#8592; Back to Profile</button> </a>
+          <hr>
+          <h3 style="text-align: center;"> Account Settings</h3>
+          <hr>
+          <img src="{{ request.user.profile.profile_pic.url }}" class="profile_pic">
+          <br>
+          
+        </div>
+
+      </div>
+      
+      <div class="col-md-9">
+        <div class="card card-body">
+          {% if messages %}
+        
+            {% for msg in messages %}       
+            
+                <div class="alert alert-{{msg.level_tag}}" role="alert">
+                <i>{{msg.message}}</i>
+                </div>
+            
+            {% endfor %}
+        
+          {% endif %}
+          <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h5 class="card-text">Username:</h5>
+            {{ u_form.username|as_crispy_field }}
+
+
+            <h5 class="card-text">Email Address:</h5>
+            {{ u_form.email|as_crispy_field }}
+
+            <h5 class="card-text">How old are you ? <h5>
+            {{ p_form.age|as_crispy_field }}
+
+            <h5 class="card-text"> What's your gender? </h5>
+            {{ p_form.gender|as_crispy_field }}
+
+            <h5 class="card-text">What country do you live in ?</h5>
+            {{ p_form.country|as_crispy_field }}
+
+            <h5 class="card-text">What state do you live in ?</h5>
+            {{ p_form.state|as_crispy_field }}
+
+            <h5 class="card-text"> A short paragraph about you ?</h5>  
+            {{ p_form.bio|as_crispy_field }}
+
+            <h5 class="card-text"> Your profile picture :</h5>
+            {{ p_form.profile_pic|as_crispy_field }}
+
+
+
+            <button type="submit"class="btn btn-default" style=" color: white;">
+              Update Information
+            </button> 
+            <br>
+            <br>
+            <br>
+           
+          </form>
+          
+        </div>
+
+<!--           <footer>
+            <p style="text-align: center; font-size: 20px;">
+              Created by <i style="font-size: 20px;"> Dummyware</i>
+                
+            </p>
+
+          </footer> -->
+          
+      </div>
+     
+
+
+    </div>
+    
+    
+    <!-- <a href="#" class="btn btn-default" style="background-color: #e30133; color: white; margin-top: 100px;">Generate</a> -->
+  </body>
+		<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</html>

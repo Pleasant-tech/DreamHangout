@@ -1,0 +1,49 @@
+body{
+  background-color: rgb(36, 41, 46)!important;
+  font-family: 'Montserrat', sans-serif
+}
+
+h1,h2,h3,h4,h5,h6,i{
+  color: #fff;
+  font-family: 'Montserrat', sans-serif
+}
+
+hr{
+  background-color: #eaeaeaea;
+}
+
+.card{
+  background-color: rgb(49,54,63)!important;
+  border:2px solid rgb(24, 26, 31);
+}
+button{
+  background: #FF416C;
+  background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+  background: linear-gradient(to right, #FF4B2B, #FF416C);
+  border:2px solid rgb(24, 26, 31);
+  color: white;
+
+}
+footer {
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+}
+footer p {
+  margin: 10px 0;
+}
+
+footer i {
+ color: red;
+}
+
+a {
+
+  text-decoration: none;
+}

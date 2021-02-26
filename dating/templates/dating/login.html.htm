@@ -1,0 +1,75 @@
+{%  load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Login</title>
+        <link rel="icon" href="{% static '/images/love.png'  %}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        
+
+        <link rel="stylesheet" type="text/css" href="{% static '/css/lightlogin.css'  %}">
+    </head>
+    <body>
+
+        <img src="{% static '/images/love.png'  %}" width="50" height="50" class="d-inline-block align-top" alt="">
+        <div class="container" id="container">
+
+            
+            <div class="form-container sign-in-container">
+
+                <form action="" method="POST">
+                  {% csrf_token %}
+                    
+
+                    <h1>Sign in</h1>
+                    <br>
+                    <input type="text" placeholder="Username" name="username" />
+                    <input type="password" placeholder="Password" name="password" />
+                    <a href="{% url 'reset_password' %}"  style=" text-decoration: none; outline: none;">Forgot your password?</a>
+                    <button type="submit">Sign In</button>
+                    <br>
+                    <br>
+                    {% if messages %}
+        
+                        {% for msg in messages %}       
+                            <br>
+                        
+                            <div class="alert alert-{{msg.level_tag}}" role="alert">
+                               {{msg.message}}
+                            </div>
+                        
+                        {% endfor %}
+            
+                    {% endif %}
+                    
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                
+                    <div class="overlay-panel overlay-right">
+                        
+                        <br>
+                        <h1>Hello, Friend!</h1>
+                        <p>We'll help you create an account in a few easy steps.</p>
+                        <a href="{% url 'register' %}">
+                            <button class="ghost" id="signUp">Next</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p style="text-align: center; font-size: 20px;">
+              Created by <i style="font-size: 20px;"> Dummyware</i>
+                
+            </p>
+
+        </footer>
+ 
+        
+
+    </body>
+</html>
